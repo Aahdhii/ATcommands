@@ -1,0 +1,17 @@
+AT
+
+Checks connection between the terminal and modem.
+
+Response: OK
+
+ATI
+
+Displays modem info like manufacturer, model, and version.
+
+Response: Device details + OK
+
+ATZ
+
+Resets modem to default settings.
+
+Response: OK
