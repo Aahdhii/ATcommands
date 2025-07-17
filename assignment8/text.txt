@@ -1,0 +1,25 @@
+﻿Module: Cavli C10GS (LTE Cat 1) / Cavli C42GM (Cat M1/NB-IoT)
+Interfaces Supported: UART, USB, GNSS, TCP/IP
+Used in: IoT gateways, smart meters, mobility solutions, logistics trackers
+Command:
+AT+CAVBATT?
+Description:
+Returns the current battery voltage connected to the module.
+Mock Output:
++CAVBATT: 3.85 V
+    OK
+Command:
+AT+CAVGNSSLOC?
+Description:
+Returns the latest GNSS coordinates with fix quality.
+Mock Output:
++CAVGNSSLOC: 12.9716,77.5946,Fix=3D
+   OK
+Command:
+AT+CAVNETINFO?
+Description:
+Returns the network registration mode, band, and operator.
+Mock Output:
++CAVNETINFO: LTE, Band 3, Airtel
+   OK
+

@@ -1,0 +1,60 @@
+1. AT+CMGF – SMS Mode Selection
+Description:
+Sets the SMS message format to Text mode (1) or PDU mode (0).
+
+AT+CMGF=? → Shows supported modes → +CMGF: (0,1)
+
+AT+CMGF? → Reads current mode → +CMGF: 1
+
+AT+CMGF=1 → Sets mode to text → Response: OK
+
+Use Case:
+Required before sending SMS using AT+CMGS.
+
+2. AT+CSQ – Signal Quality
+Description:
+Returns the signal strength (RSSI) and bit error rate (BER).
+
+
+AT+CSQ? → Shows signal values → +CSQ: 15,0
+
+Use Case:
+Monitor network signal quality; RSSI ranges from 0 (poor) to 31 (excellent).
+BER = 0 means error-free signal.
+
+3. AT+CPIN? – SIM Status
+Description:
+Checks if the SIM card is ready, requires PIN, or is locked.
+
+How to Use:
+
+AT+CPIN? → Returns status → +CPIN: READY
+
+AT+CPIN=? → Shows possible states (if supported)
+
+Use Case:
+Ensure the modem can access the SIM before attempting communication.
+
+4. AT+COPS – Network Operator
+Description:
+Displays or sets the mobile network operator manually or automatically.
+
+AT+COPS=? → Lists available networks
+
+AT+COPS? → Shows current network → +COPS: 0,0,"Airtel"
+
+AT+COPS=0 → Selects operator automatically
+
+Use Case:
+Identify or manually select the best mobile network.
+
+5. AT+CMGR – Read SMS Message
+Description:
+Reads a stored SMS from memory by index number.
+
+AT+CMGR=? → Shows valid message index range
+
+AT+CMGR=1 → Reads SMS at index 1 → Displays full message
+
+Use Case:
+Useful for debugging SMS reception and memory behavior.

@@ -1,0 +1,25 @@
+﻿This assignment focuses on understanding how AT commands handle errors and how to simulate and interpret error responses using a modem or emulator.
+
+The goal is to:
+
+Trigger errors intentionally using unsupported or malformed AT commands.
+
+Enable verbose error reporting using the AT+CMEE=2 command (if supported).
+
+Learn how to interpret ERROR and +CME ERROR responses.
+
+In the CelerSMS AT Emulator, the command AT+CMEE=2 returns:
+
+ERROR 
+
+indicating that verbose error reporting is not supported in the emulator. Despite this limitation, error testing can still be performed by sending invalid commands such as:
+
+AT+XYZ → Unknown command
+
+AT+CMGS= → Missing parameter
+
+AT+CMGR=100 → Invalid SMS index
+
+Each of these results in a general ERROR, which must be interpreted manually based on the command context.
+
+This assignment teaches how to identify errors, understand their causes, and prepares users for debugging real GSM/LTE modules.

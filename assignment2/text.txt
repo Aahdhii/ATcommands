@@ -1,0 +1,16 @@
+AT+CSQ – Signal Quality
+Reports the Received Signal Strength Indicator (RSSI) and Bit Error Rate (BER).
+
+Response format: +CSQ: <rssi>,<ber>
+
+AT+CPIN? – SIM Status Check
+Checks whether the SIM card is ready, needs a PIN, or is missing.
+
+Response format: +CPIN: READY or +CPIN: SIM PIN
+
+AT+COPS? – Network Operator Info
+Returns the current mobile network operator info.
+
+Response format: +COPS: <mode>,<format>,<operator>
+
+

@@ -1,0 +1,82 @@
+﻿AT+CMGF=1
+
+Sets SMS format to Text mode
+
+Response: OK
+
+AT+CMGS="1234567890"
+
+Sends SMS to a dummy number
+
+Message: Hello from the emulator!
+
+Response: +CMGS: 1, OK
+
+AT+CMGR=1
+
+Reads SMS at index 1
+
+ Response: ERROR
+
+Reason: Emulator may not support SMS storage retrieval
+
+Remarks:
+SMS sending (AT+CMGS) works as expected.
+
+SMS reading (AT+CMGR) fails due to emulator limitation.
+
+Command responses were documented and captured.
+
+Expected Output for Each Command
+1. AT+CMGF=1
+Purpose: Set SMS format to Text Mode
+Expected Output:
+
+
+
+plaintext
+
+OK 
+
+2. AT+CMGS="1234567890"
+Purpose: Send SMS to a dummy number (simulated)
+ Expected Sequence:
+
+
+
+plaintext
+
+
+> Hello from the emulator! 
+
+(After you type message and press Ctrl+Z or click "Send")
+
+Final Expected Output:
+
+
+
+plaintext
+
+
++CMGS: 1 OK 
+
++CMGS: 1 indicates the message was stored at index 1.
+
+3. AT+CMGR=1
+Purpose: Read SMS stored at index 1
+ Expected Output:
+
+
+
+plaintext
+
+
++CMGR: "REC READ","+1234567890",,"25/07/16,12:00:00+22" Hello from the emulator! OK 
+
+Shows message status, sender, timestamp, and message content.
+
+
+
+
+
+
